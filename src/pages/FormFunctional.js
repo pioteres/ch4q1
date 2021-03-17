@@ -16,20 +16,30 @@ function FormFunctional() {
         <div>
             {!isSubmited
             ? <form onSubmit={handleSubmit}>
-                <input type="number" name="netto" placeholder="Podaj kwotę netto" />
-                <select name="tip">
+                <div>
+                    <input type="number" name="netto" placeholder="Podaj kwotę netto" />
+                </div>
+                <div>
+                    <label for="name">Napiwek</label>
+                    <select name="tip">
                     <option value="1">0%</option>
                     <option value="1.05">5%</option>
                     <option value="1.1">10%</option>
                     <option value="1.15">15%</option>
                     <option value="1.2">20%</option>
                 </select>
-                <select name="vat">
-                    <option value="1.05">5%</option>
-                    <option value="1.08">8%</option>
-                    <option value="1.23">23%</option>
-                </select>
-                <button type="submit">Przelicz</button>
+                </div>
+                <div>
+                    <label for="vat">Stawka VAT</label>
+                    <select name="vat">
+                        <option value="1.05">5%</option>
+                        <option value="1.08">8%</option>
+                        <option value="1.23">23%</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Przelicz</button>
+                </div>
             </form>
             : <div><p>Do zapłaty: ${billValue} </p><button onClick={handleNewBillClick}>Nowy rachunek</button></div>
             }
