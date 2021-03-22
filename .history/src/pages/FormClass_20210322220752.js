@@ -19,7 +19,7 @@ class FormClass extends React.Component {
         return (
             <div>
                 {!this.state.isSubmitted
-                ? <form onSubmit={this.handleSubmit}  >
+                ? <form onSubmit={this.handleSubmit} noValidate >
                     <div>
                         <input type="number" name="netto" placeholder="Podaj kwotę netto" />
                     </div>

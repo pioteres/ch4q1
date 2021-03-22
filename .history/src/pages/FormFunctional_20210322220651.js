@@ -16,12 +16,12 @@ function FormFunctional() {
     );
   };
   const handleNewBillClick = () => {
-    setIsSubmitted(!isSubmitted);
+    setIsSubmited(!isSubmited);
   };
   return (
     <div>
-      {!isSubmitted ? (
-        <form onSubmit={handleSubmit} noValidate >
+      {!isSubmited ? (
+        <form onSubmit={handleSubmit}>
           <div>
             <input type="number" name="netto" placeholder="Podaj kwotę netto" />
           </div>

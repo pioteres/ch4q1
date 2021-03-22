@@ -2,24 +2,24 @@ import React from 'react';
 
 class FormClass extends React.Component {
     state = {
-        isSubmitted: false,
+        isSubmited: false,
         billValue: 0
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState({ billValue: Math.round((e.target.netto.value * e.target.tip.value * e.target.vat.value + Number.EPSILON)*100 ) / 100});
-        this.setState({isSubmitted: !this.state.isSubmitted});
+        this.setState({isSubmited: !this.state.isSubmited});
     }
     handleNewBillClick = (e) => {
-        this.setState({isSubmitted: !this.state.isSubmitted});
+        this.setState({isSubmited: !this.state.isSubmited});
 
     }
     render() {
         return (
             <div>
-                {!this.state.isSubmitted
-                ? <form onSubmit={this.handleSubmit}  >
+                {!this.state.isSubmited
+                ? <form onSubmit={this.handleSubmit}>
                     <div>
                         <input type="number" name="netto" placeholder="Podaj kwotę netto" />
                     </div>

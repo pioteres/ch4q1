@@ -21,7 +21,7 @@ function FormFunctional() {
   return (
     <div>
       {!isSubmitted ? (
-        <form onSubmit={handleSubmit} noValidate >
+        <form onSubmit={handleSubmit}>
           <div>
             <input type="number" name="netto" placeholder="Podaj kwotę netto" />
           </div>
